@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Top</title>
   <link rel="stylesheet" href="top.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
 </head>
 <body>
   <header class="main">
@@ -30,24 +33,48 @@
   </section>
   <section class="flex-products">
     <h2>FEATURED PRODUCTS</h2>
-    <div class="flex-container">
-      <div class="flex-item">
-        <img src="product1.jpg" alt="Embroidery Stabilizer">
-        <p>EMBROIDERY STABILIZER</p>
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide">
+            <img src="product1.jpg" alt="Embroidery Stabilizer">
+            <p>EMBROIDERY STABILIZER</p>
+          </li>
+          <li class="glide__slide">
+            <img src="product2.jpg" alt="Cubbie Grey Elephant">
+            <p>CUBBIE GREY ELEPHANT</p>
+          </li>
+          <li class="glide__slide">
+            <img src="product3.jpg" alt="Kimberbell Cup of Cheer">
+            <p>KIMBERBELL CUP OF CHEER</p>
+          </li>
+          <li class="glide__slide">
+            <img src="product4.jpg" alt="Kimberbell Two Scoops">
+            <p>KIMBERBELL TWO SCOOPS</p>
+          </li>
+        </ul>
       </div>
-      <div class="flex-item">
-        <img src="product2.jpg" alt="Cubbie Grey Elephant">
-        <p>CUBBIE GREY ELEPHANT</p>
-      </div>
-      <div class="flex-item">
-        <img src="product3.jpg" alt="Kimberbell Cup of Cheer">
-        <p>KIMBERBELL CUP OF CHEER</p>
-      </div>
-      <div class="flex-item">
-        <img src="product4.jpg" alt="Kimberbell Two Scoops">
-        <p>KIMBERBELL TWO SCOOPS</p>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">❮</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">❯</button>
       </div>
     </div>
   </section>
+  
 </body>
+
 </html>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Glide('.glide', {
+      type: 'carousel', 
+      startAt: 0,       
+      perView: 3,       
+      gap: 20,         
+      breakpoints: {
+        768: { perView: 2 }, 
+        480: { perView: 1 }  
+      }
+    }).mount();
+  });
+</script>
