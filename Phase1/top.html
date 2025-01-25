@@ -31,6 +31,7 @@
       <p>PREMIUM SPARKLE</p>
     </div>
   </section>
+
   <section class="flex-products">
     <h2>FEATURED PRODUCTS</h2>
     <div class="glide">
@@ -60,21 +61,24 @@
       </div>
     </div>
   </section>
+
+  <footer>
+    <p>© 2025 Your Company. All rights reserved.</p>
+  </footer>
   
 </body>
-
-</html>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Glide('.glide', {
-      type: 'carousel', 
-      startAt: 0,       
-      perView: 3,       
-      gap: 20,         
+      type: 'carousel',
+      startAt: 0,
+      perView: 3,
+      gap: 20,
       breakpoints: {
-        768: { perView: 2 }, 
-        480: { perView: 1 }  
+        768: { perView: 2 },
+        480: { perView: 1 }
       }
     }).mount();
   });
 </script>
+</html>
